@@ -1,0 +1,24 @@
+{
+  "name": "njson",
+  "description": "a service to log from nodeJS to a json web tree-view",
+  "version": "0.1.0",
+  "author": "Toni Wagner <i@itsatony.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/itsatony/nJSON.git"
+  },
+  "dependencies": {
+    "minions": "latest",
+    "escalator": "latest",
+    "json-stringify-safe": "latest",
+		"lactate": "latest",
+    "hiredis": "latest",
+    "redis": "0.10.1"
+  },
+  "devDependencies": {
+    "heapdump": "0.2.7",
+    "mocha": "1.13.0",
+    "should": "2.0.1"
+  },
+  "engine": "node >= 0.10.0"
+}
