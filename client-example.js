@@ -4,14 +4,21 @@ var stringify = require('json-stringify-safe');
 
 function logVar(data, uid) {
 	uid = (uid || minions.randomString(32, true, true, true) );
+	var host = process.argv[3] || 'localhost';
+	var port = process.argv[2] || 8080;
+	var url = 'http://' + host + ':' + port + '/' + uid;
 	var send = nJSON.client(
 		// value, 
 		data,
-		'http://localhost:8080/' + uid, 
-		function(statusCode, response) {
-			console.log('written to [ http://localhost:8080/' + uid + ' ]');
-			console.log(response.body); 
-			process.exit();
+		url, 
+		function(result, response) {
+			console.log(result); 
+			if (response === null) {
+				console.log('NO SERVER RUNNING ?');
+			} else {
+				console.log('written to [ ' + url + ' ]');
+			}
+			return process.exit();
 		}
 	);
 };
