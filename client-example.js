@@ -1,4 +1,6 @@
 var nJSON = require('./njson');
+var njsonClient = nJSON.client();
+
 var Lg = require('lg');
 var log = new Lg({
 	log2console: true,
@@ -10,7 +12,7 @@ function logVar(data, uid) {
 	var host = process.argv[3] || 'njson.itsatony.com';
 	var port = process.argv[2] || 80;
 	var url = 'http://' + host + ':' + port + '/?id=' + uid;
-	var send = nJSON.client(
+	var send = njsonClient(
 		data,
 		url, 
 		function(result, response) {

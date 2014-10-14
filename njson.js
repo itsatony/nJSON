@@ -1,6 +1,10 @@
 var nJSON = {
-	server: require('./lib/nJSON-server'),
-	client: require('./lib/nJSON-client')
+	server: function() { 
+		return require('./lib/nJSON-server'); 
+	},
+	client: function() { 
+		return require('./lib/nJSON-client'); 
+	}
 };
 
 module.exports = nJSON;

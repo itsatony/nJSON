@@ -1,3 +1,4 @@
 var nJSON = require('./njson');
+var njsonServer = nJSON.server();
 
-var server = nJSON.server(process.argv[2] || 8080);
+var server = njsonServer(process.argv[2] || 8080);
