@@ -47,6 +47,7 @@ function filter(nodeName) {
 		renderData = traverse(jsonData, nodeName, 'root');
 		if (renderData === false) {
 			jQuery('#chain').text('filter->');
+			jQuery('#filter').select();
 			return false;
 		}
 	}
