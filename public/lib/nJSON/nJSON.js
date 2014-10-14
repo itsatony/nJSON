@@ -61,6 +61,12 @@ function traverse(data, name, chain) {
 	var subMatch = false;
 	for (var n in data) {
 		if (n === name) {
+			if (typeof data[n] !== 'object') {
+				var vType = typeof data[n];
+				var fakeObject = {};
+				fakeObject[name+'[' + vType + ']'] = data[n];
+				return [ chain, fakeObject ];
+			}
 			return [ chain, data[n] ];
 		} 
 		if (typeof data[n] === 'object') {
