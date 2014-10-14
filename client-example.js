@@ -4,9 +4,9 @@ var stringify = require('json-stringify-safe');
 
 function logVar(data, uid) {
 	uid = (uid || minions.randomString(32, true, true, true) );
-	var host = process.argv[3] || 'localhost';
-	var port = process.argv[2] || 8080;
-	var url = 'http://' + host + ':' + port + '/' + uid;
+	var host = process.argv[3] || 'njson.itsatony.com';
+	var port = process.argv[2] || 80;
+	var url = 'http://' + host + ':' + port + '/?id=' + uid;
 	var send = nJSON.client(
 		// value, 
 		data,

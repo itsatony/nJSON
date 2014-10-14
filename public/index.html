@@ -1,7 +1,6 @@
-<!DOCTYPE html>
 <html>
 	<head>
-		<meta charset='utf-8' />
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<link rel="stylesheet" type="text/css" media="screen" href="/lib/nJSON/nJSON.css" />
 		<link rel="stylesheet" type="text/css" media="screen" href="/lib/jsonview/jsonview.css" />
 		<script type="text/javascript" src="/lib/jquery-2.1.1.min.js"></script>
@@ -11,19 +10,26 @@
 		<title>nJSON</title>
 	</head>
 	<body>
-		<h1>Welcome to nJSON</h1>
-    <div id="topbar" class="topbar">
+		<div>
+			<h1>nJSON</h1>
+			<div class="njson_css_inputWrapper">
+				<input id="uidinput" value="{{UID}}" size=50></input><button id="refresh">refresh</button>
+			</div>
+			<div style="clear: both"></div>
+			<h2>JSON</h2>
+			<div id="treeContainer">
+			</div>
+			<h2>STRINGIFIED</h2>
+			<div class="dataContainer">
+				<pre id="jsonData">{{JSONDATA}}</pre>
+			</div>
+		</div>
+    <div id="info" class="njson_css_info">
+			<h2>ABOUT</h2>
 			<p>nJSON is a super simple service that allows you to send JSON to our server and explore it on the web.<br/>
 			For more info as well as a demo server and nodejs-client check out the public repository at <a href="https://github.com/itsatony/nJSON">https://github.com/itsatony/nJSON</a></p>
-    </div>
-		<h2>JSON</h2>
-		<div id="treeContainer">
+    	<h2>SPONSORED</h2>
+			<p>by KLab Berlin GmbH - check us out <a href="https://github.com/orgs/Klab-Berlin">https://github.com/orgs/Klab-Berlin</a></p>
 		</div>
-		<h2>STRINGIFIED</h2>
-		<div class="dataContainer">
-			<pre id="jsonData">{{JSONDATA}}</pre>
-		</div>
-		<h2>SPONSORED</h2>
-		<p>by KLab Berlin GmbH - check us out <a href="https://github.com/orgs/Klab-Berlin">https://github.com/orgs/Klab-Berlin</a></p>
 	</body>
 </html>
