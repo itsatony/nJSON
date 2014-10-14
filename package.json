@@ -1,7 +1,7 @@
 {
   "name": "njson",
   "description": "a service to log from nodeJS to a json web tree-view",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "author": "Toni Wagner <i@itsatony.com>",
   "repository": {
     "type": "git",

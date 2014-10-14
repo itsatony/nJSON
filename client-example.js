@@ -49,10 +49,12 @@ var demoVar2 = {
 		c3: { 
 			c3a: 1, 
 			c3b: 'more' 
-		} 
+		}
 	} 
 };
 
-logVar(demoVar);
+demoVar.d = demoVar;
 
-log.njson(demoVar2);
+logVar(demoVar, '1413293667194d9xwrc1drdmmi4v01kkw63nem000toni');
+
+// log.njson(demoVar2);
