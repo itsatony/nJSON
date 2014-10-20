@@ -3,7 +3,7 @@ nJSON
 
 nJSON is a service to log json data to a redis-instance and display&filter it via a json web tree-view.
 
-https://njson.itsatony.com is a public (and free) nJSON server instance anybody can us to log JS variables/json data to and explore it.
+https://njson.itsatony.com is a public (and free) nJSON server instance anybody can use to log JS variables/json data to and explore it.
 
 any kind of contributions are super welcome!
 
