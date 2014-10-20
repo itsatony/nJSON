@@ -25,8 +25,8 @@ any kind of contributions are super welcome!
 
 ````
 	var nJSON = require('njson');
-	var njsonClient = nJSON.client();
-	sendJSON(variable, href, callback); 
+	var njson = nJSON.client();
+	njson(variable, href, callback); 
 	// href is optional and defaults to njson.itsatony.com .
 	// callback is optional. you will receive the id to access your data.
 	// check https://github.com/itsatony/nJSON/blob/master/client-example.js for details.
