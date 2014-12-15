@@ -9,6 +9,7 @@ function initialize() {
 	render(jsonData, '');
 	bindRefresh();
 	bindFilter();
+	bindGotoPost();
 	createFilterAutoComplete();
 	return true;
 };
@@ -68,8 +69,7 @@ function bindGotoPost() {
 		'click',
 		function() {
 			var id = encodeURIComponent(jQuery('#uidinput').val());
-			var url = document.location.pathname = '/post.html?id=' + id;
-			document.location.reload();
+			document.location.assign('https://njson.itsatony.com/post.html?id=' + id);
 		}
 	);
 };

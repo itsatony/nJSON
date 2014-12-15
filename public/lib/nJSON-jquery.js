@@ -20,7 +20,7 @@ window.njson = function(data, id, callback) {
 		}		
 		return id;
 	};	
-	var id = (typeof id === 'string' && id.length > 4) 
+	var id = (typeof id === 'string' && id.length > 5) 
 		? 
 			id  
 		: 
@@ -36,8 +36,15 @@ window.njson = function(data, id, callback) {
 				'content-type': 'application/json;charset=UTF-8'
 			},
 			success: function(msg) {
+				console.log('[success]submitted');
 				if (typeof callback === 'function') {
-					callback(msg);
+					callback(null, msg);
+				}
+			},
+			error: function(err) {
+				console.log('[fail!] NOT submitted');
+				if (typeof callback === 'function') {
+					callback(err, null);
 				}
 			}
 		}
