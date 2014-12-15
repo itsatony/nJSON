@@ -67,7 +67,8 @@ function bindGotoPost() {
 	jQuery('#gotopost').on(
 		'click',
 		function() {
-			var url = document.location.pathname = '/post.html';
+			var id = encodeURIComponent(jQuery('#uidinput').val());
+			var url = document.location.pathname = '/post.html?id=' + id;
 			document.location.reload();
 		}
 	);
