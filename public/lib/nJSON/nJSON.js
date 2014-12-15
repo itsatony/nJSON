@@ -6,9 +6,9 @@ jQuery(document).ready(
 
 function initialize() {
 	var jsonData = JSON.parse(jQuery('#jsonData').text());
+	render(jsonData, '');
 	bindRefresh();
 	bindFilter();
-	render(jsonData, '');
 	createFilterAutoComplete();
 	return true;
 };
@@ -63,13 +63,24 @@ function bindFilter() {
 };
 
 
+function bindGotoPost() {
+	jQuery('#gotopost').on(
+		'click',
+		function() {
+			var url = document.location.pathname = '/post.html';
+			document.location.reload();
+		}
+	);
+};
+
+
 function bindRefresh() {
 	jQuery('#refresh').on(
 		'click',
 		function() {
-			var id = jQuery('#uidinput').val();
-			url = document.location.search = '?id=' + id;
-			document.loaction.reload();
+			var id = encodeURIComponent(jQuery('#uidinput').val());
+			var url = document.location.search = '?id=' + id;
+			document.location.reload();
 		}
 	);
 };

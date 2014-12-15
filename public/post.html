@@ -8,26 +8,22 @@
 		<link rel="stylesheet" type="text/css" media="screen" href="/lib/jquery-ui-1.11.1.custom/jquery-ui.css" />
 		<script type="text/javascript" src="/lib/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
 		
+		<script type="text/javascript" src="/lib/nJSON-post.js"></script>
 		<script type="text/javascript" src="/lib/jsonview/jsonview.js"></script>
-		<script type="text/javascript" src="/lib/nJSON/nJSON.js"></script>
-		<title>nJSON|{{UID}}</title>
+		<script type="text/javascript" src="/lib/nJSON-jquery.js"></script>
+        
+		<title>nJSON|insert</title>
 	</head>
 	<body>
 		<div>
 			<h1>nJSON</h1>
 			<div class="njson_css_inputWrapper">
-				<input id="uidinput" value="{{UID}}" size=50></input><button id="refresh">refresh</button><button id="gotopost">submit new json</button>
-			</div>
-			<div id="njson_filter_wrapper" class="njson_css_inputWrapper">
-				<input id="filter" size=50></input>
+				<input id="uidinput" value="" size=50></input><button id="save">save</button>
 			</div>
 			<div style="clear: both"></div>
-			<h2>JSON: <span id="chain">unfiltered</span></h2>
-			<div id="treeContainer">
-			</div>
-			<h2>STRINGIFIED</h2>
-			<div class="dataContainer">
-				<pre id="jsonData">{{JSONDATA}}</pre>
+			<h2>JSON: <span id="chain">input</span></h2>
+			<div class="dataInputContainer">
+				<textarea id="jsonInputData"></textarea>
 			</div>
 		</div>
     <div id="info" class="njson_css_info">
