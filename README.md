@@ -17,7 +17,7 @@ any kind of contributions are super welcome!
 
     - (with a http POST or PUT)  /?id={{id}} checks for JSON data format and writes that into the redis key id
 
-    - all submitted data is auto-deleted after 24h
+    - all submitted data is auto-deleted after 24h after the last access
 
 - a simple nodejs client that can be used from any nodejs project to log variables to njson
 
@@ -45,6 +45,11 @@ any kind of contributions are super welcome!
 	</head>
 ````
 
+- a bash script to submit data is available in the repository as well @ https://njson.itsatony.com/njson-bash-example.sh
+
+````
+    ./njson.sh any.json testjsondataviacurl
+````
 
 
 ## install
