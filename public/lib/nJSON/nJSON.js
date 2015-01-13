@@ -11,9 +11,28 @@ function initialize() {
 	bindFilter();
 	bindGotoPost();
 	createFilterAutoComplete();
+	extendLinuxTimestamps();
 	return true;
 };
 
+
+function extendLinuxTimestamps() {
+	jQuery('.num').each(
+		function(k, v) {
+			var num = jQuery(this).text();
+			var d = 0, fd = 0;
+			if (num.length === 13 && num[0] === '1') {
+				try {
+					d = new Date(parseInt(num));
+					fd = d.toLocaleString();
+					jQuery(this).text(num + ' (' + fd + ')');
+				} catch(e) {
+					console.log(e);
+				}
+			}
+		}
+	);
+};
 
 function createFilterAutoComplete() {
 	var obj = JSON.parse(jQuery('#jsonData').text());
