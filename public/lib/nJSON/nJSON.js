@@ -21,11 +21,11 @@ function extendLinuxTimestamps() {
 		function(k, v) {
 			var num = jQuery(this).text();
 			var d = 0, fd = 0;
-			if (num.length === 13 && num[0] === '1') {
+			if (num.length === 13 && num.indexOf('14') === 0) {
 				try {
 					d = new Date(parseInt(num));
 					fd = d.toLocaleString();
-					jQuery(this).text(num + ' (' + fd + ')');
+					jQuery(this).text(num + ' (auto-converted by njson: ' + fd + ')');
 				} catch(e) {
 					console.log(e);
 				}
